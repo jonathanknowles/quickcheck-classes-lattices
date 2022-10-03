@@ -46,11 +46,14 @@ library
     hs-source-dirs:
         src/public
     exposed-modules:
-        Lib
+        Test.QuickCheck.Classes.Algebra.PartialOrd
     default-language:
         Haskell2010
     build-depends:
         base >=4.7 && <5
+      , lattices
+      , QuickCheck
+      , quickcheck-classes
       , quickcheck-classes-lattices:internal
 
 library examples
@@ -71,10 +74,16 @@ library internal
     hs-source-dirs:
         src/internal
     exposed-modules:
+        Data.Semigroup.Eq
+        Test.QuickCheck.Classes.Semigroup.Internal
+        Test.QuickCheck.Classes.Semigroup.Tuple
     default-language:
         Haskell2010
     build-depends:
         base >=4.7 && <5
+      , pretty-show
+      , QuickCheck
+      , semigroupoids
 
 test-suite test
     import:
@@ -84,6 +93,8 @@ test-suite test
     hs-source-dirs:
         src/test
     other-modules:
+        Test.QuickCheck.Classes.AlgebraSpec
+        Test.QuickCheck.Classes.Hspec
     type: exitcode-stdio-1.0
     default-language:
         Haskell2010
@@ -91,7 +102,10 @@ test-suite test
         hspec-discover:hspec-discover ==2.*
     build-depends:
         base >=4.7 && <5
+      , containers
       , hspec
+      , QuickCheck
+      , quickcheck-classes
       , quickcheck-classes-lattices
       , quickcheck-classes-lattices:internal
 
