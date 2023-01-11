@@ -38,8 +38,8 @@
 </span><span id="line-38"></span><span class="hs-comment">-- prop&gt; a `leq` b &amp;&amp; b `leq` c ==&gt; a `leq` c</span><span>
 </span><span id="line-39"></span><span class="hs-comment">--</span><span>
 </span><span id="line-40"></span><span class="annot"><a href="Test.QuickCheck.Classes.Algebra.PartialOrd.html#partialOrdLaws"><span class="hs-identifier hs-type">partialOrdLaws</span></a></span><span>
-</span><span id="line-41"></span><span>    </span><span class="hs-glyph">::</span><span> </span><span class="hs-keyword">forall</span><span> </span><span id="local-6989586621679041563"><span class="annot"><a href="#local-6989586621679041563"><span class="hs-identifier hs-type">a</span></a></span></span><span class="hs-operator">.</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="hs-identifier hs-type">Arbitrary</span></span><span> </span><span class="annot"><a href="#local-6989586621679041563"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="hs-identifier hs-type">Show</span></span><span> </span><span class="annot"><a href="#local-6989586621679041563"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="hs-identifier hs-type">Monoid</span></span><span> </span><span class="annot"><a href="#local-6989586621679041563"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="hs-identifier hs-type">PartialOrd</span></span><span> </span><span class="annot"><a href="#local-6989586621679041563"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-42"></span><span>    </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><span class="hs-identifier hs-type">Proxy</span></span><span> </span><span class="annot"><a href="#local-6989586621679041563"><span class="hs-identifier hs-type">a</span></a></span><span>
+</span><span id="line-41"></span><span>    </span><span class="hs-glyph">::</span><span> </span><span class="hs-keyword">forall</span><span> </span><span id="local-6989586621679051004"><span class="annot"><a href="#local-6989586621679051004"><span class="hs-identifier hs-type">a</span></a></span></span><span class="hs-operator">.</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="hs-identifier hs-type">Arbitrary</span></span><span> </span><span class="annot"><a href="#local-6989586621679051004"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="hs-identifier hs-type">Show</span></span><span> </span><span class="annot"><a href="#local-6989586621679051004"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="hs-identifier hs-type">Monoid</span></span><span> </span><span class="annot"><a href="#local-6989586621679051004"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="hs-identifier hs-type">PartialOrd</span></span><span> </span><span class="annot"><a href="#local-6989586621679051004"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">)</span><span>
+</span><span id="line-42"></span><span>    </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><span class="hs-identifier hs-type">Proxy</span></span><span> </span><span class="annot"><a href="#local-6989586621679051004"><span class="hs-identifier hs-type">a</span></a></span><span>
 </span><span id="line-43"></span><span>    </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="hs-identifier hs-type">Laws</span></span><span>
 </span><span id="line-44"></span><span id="partialOrdLaws"><span class="annot"><span class="annottext">partialOrdLaws :: forall a.
 (Arbitrary a, Show a, Monoid a, PartialOrd a) =&gt;
@@ -51,7 +51,7 @@ Proxy a -&gt; Laws
 </span><span id="line-45"></span><span>    </span><span class="hs-special">[</span><span> </span><span class="annot"><span class="annottext">forall a t.
 (Arbitrary a, Show a, Eq a, Monoid a, Testable t) =&gt;
 String -&gt; (a -&gt; t) -&gt; (String, Property)
-</span><span class="hs-identifier hs-var">makeLaw1</span></span><span> </span><span class="hs-glyph">@</span><span class="annot"><a href="#local-6989586621679041563"><span class="hs-identifier hs-type">a</span></a></span><span>
+</span><span class="hs-identifier hs-var">makeLaw1</span></span><span> </span><span class="hs-glyph">@</span><span class="annot"><a href="#local-6989586621679051004"><span class="hs-identifier hs-type">a</span></a></span><span>
 </span><span id="line-46"></span><span>        </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;partialOrdLaw_reflexivity&quot;</span></span><span>
 </span><span id="line-47"></span><span>        </span><span class="hs-special">(</span><span class="annot"><span class="annottext">a -&gt; Property
@@ -60,7 +60,7 @@ forall a. PartialOrd a =&gt; a -&gt; Property
 </span><span id="line-48"></span><span>    </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">forall a t.
 (Arbitrary a, Show a, Eq a, Semigroup a, Testable t) =&gt;
 String -&gt; (a -&gt; a -&gt; t) -&gt; (String, Property)
-</span><span class="hs-identifier hs-var">makeLaw2</span></span><span> </span><span class="hs-glyph">@</span><span class="annot"><a href="#local-6989586621679041563"><span class="hs-identifier hs-type">a</span></a></span><span>
+</span><span class="hs-identifier hs-var">makeLaw2</span></span><span> </span><span class="hs-glyph">@</span><span class="annot"><a href="#local-6989586621679051004"><span class="hs-identifier hs-type">a</span></a></span><span>
 </span><span id="line-49"></span><span>        </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;partialOrdLaw_antisymmetry&quot;</span></span><span>
 </span><span id="line-50"></span><span>        </span><span class="hs-special">(</span><span class="annot"><span class="annottext">a -&gt; a -&gt; Property
@@ -69,7 +69,7 @@ forall a. PartialOrd a =&gt; a -&gt; a -&gt; Property
 </span><span id="line-51"></span><span>    </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">forall a t.
 (Arbitrary a, Show a, Eq a, Semigroup a, Testable t) =&gt;
 String -&gt; (a -&gt; a -&gt; a -&gt; t) -&gt; (String, Property)
-</span><span class="hs-identifier hs-var">makeLaw3</span></span><span> </span><span class="hs-glyph">@</span><span class="annot"><a href="#local-6989586621679041563"><span class="hs-identifier hs-type">a</span></a></span><span>
+</span><span class="hs-identifier hs-var">makeLaw3</span></span><span> </span><span class="hs-glyph">@</span><span class="annot"><a href="#local-6989586621679051004"><span class="hs-identifier hs-type">a</span></a></span><span>
 </span><span id="line-52"></span><span>        </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;partialOrdLaw_transitivity&quot;</span></span><span>
 </span><span id="line-53"></span><span>        </span><span class="hs-special">(</span><span class="annot"><span class="annottext">a -&gt; a -&gt; a -&gt; Property
@@ -77,28 +77,28 @@ forall a. PartialOrd a =&gt; a -&gt; a -&gt; a -&gt; Property
 </span><a href="Test.QuickCheck.Classes.Algebra.PartialOrd.html#partialOrdLaw_transitivity"><span class="hs-identifier hs-var">partialOrdLaw_transitivity</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-54"></span><span>    </span><span class="hs-special">]</span><span>
 </span><span id="line-55"></span><span>
-</span><span id="line-56"></span><span id="local-6989586621679041575"><span class="annot"><a href="Test.QuickCheck.Classes.Algebra.PartialOrd.html#partialOrdLaw_reflexivity"><span class="hs-identifier hs-type">partialOrdLaw_reflexivity</span></a></span><span>
-</span><span id="line-57"></span><span>    </span><span class="hs-glyph">::</span><span> </span><span class="annot"><span class="hs-identifier hs-type">PartialOrd</span></span><span> </span><span class="annot"><a href="#local-6989586621679041575"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="#local-6989586621679041575"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="hs-identifier hs-type">Property</span></span></span><span>
+</span><span id="line-56"></span><span id="local-6989586621679051016"><span class="annot"><a href="Test.QuickCheck.Classes.Algebra.PartialOrd.html#partialOrdLaw_reflexivity"><span class="hs-identifier hs-type">partialOrdLaw_reflexivity</span></a></span><span>
+</span><span id="line-57"></span><span>    </span><span class="hs-glyph">::</span><span> </span><span class="annot"><span class="hs-identifier hs-type">PartialOrd</span></span><span> </span><span class="annot"><a href="#local-6989586621679051016"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="#local-6989586621679051016"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="hs-identifier hs-type">Property</span></span></span><span>
 </span><span id="line-58"></span><span id="partialOrdLaw_reflexivity"><span class="annot"><span class="annottext">partialOrdLaw_reflexivity :: forall a. PartialOrd a =&gt; a -&gt; Property
-</span><a href="Test.QuickCheck.Classes.Algebra.PartialOrd.html#partialOrdLaw_reflexivity"><span class="hs-identifier hs-var hs-var">partialOrdLaw_reflexivity</span></a></span></span><span> </span><span id="local-6989586621679041633"><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041633"><span class="hs-identifier hs-var">a</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Test.QuickCheck.Classes.Algebra.PartialOrd.html#partialOrdLaw_reflexivity"><span class="hs-identifier hs-var hs-var">partialOrdLaw_reflexivity</span></a></span></span><span> </span><span id="local-6989586621679051074"><span class="annot"><span class="annottext">a
+</span><a href="#local-6989586621679051074"><span class="hs-identifier hs-var">a</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-59"></span><span>    </span><span class="annot"><span class="annottext">String -&gt; Bool -&gt; Property
 forall t. Testable t =&gt; String -&gt; t -&gt; Property
 </span><span class="hs-identifier hs-var">makeProperty</span></span><span>
 </span><span id="line-60"></span><span>        </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;a `leq` a&quot;</span></span><span>
 </span><span id="line-61"></span><span>        </span><span class="hs-special">(</span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041633"><span class="hs-identifier hs-var">a</span></a></span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; Bool
+</span><a href="#local-6989586621679051074"><span class="hs-identifier hs-var">a</span></a></span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; Bool
 forall a. PartialOrd a =&gt; a -&gt; a -&gt; Bool
 </span><span class="hs-operator hs-var">`leq`</span></span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041633"><span class="hs-identifier hs-var">a</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679051074"><span class="hs-identifier hs-var">a</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-62"></span><span>
-</span><span id="line-63"></span><span id="local-6989586621679041578"><span class="annot"><a href="Test.QuickCheck.Classes.Algebra.PartialOrd.html#partialOrdLaw_antisymmetry"><span class="hs-identifier hs-type">partialOrdLaw_antisymmetry</span></a></span><span>
-</span><span id="line-64"></span><span>    </span><span class="hs-glyph">::</span><span> </span><span class="annot"><span class="hs-identifier hs-type">PartialOrd</span></span><span> </span><span class="annot"><a href="#local-6989586621679041578"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="#local-6989586621679041578"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="#local-6989586621679041578"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="hs-identifier hs-type">Property</span></span></span><span>
+</span><span id="line-63"></span><span id="local-6989586621679051019"><span class="annot"><a href="Test.QuickCheck.Classes.Algebra.PartialOrd.html#partialOrdLaw_antisymmetry"><span class="hs-identifier hs-type">partialOrdLaw_antisymmetry</span></a></span><span>
+</span><span id="line-64"></span><span>    </span><span class="hs-glyph">::</span><span> </span><span class="annot"><span class="hs-identifier hs-type">PartialOrd</span></span><span> </span><span class="annot"><a href="#local-6989586621679051019"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="#local-6989586621679051019"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="#local-6989586621679051019"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="hs-identifier hs-type">Property</span></span></span><span>
 </span><span id="line-65"></span><span id="partialOrdLaw_antisymmetry"><span class="annot"><span class="annottext">partialOrdLaw_antisymmetry :: forall a. PartialOrd a =&gt; a -&gt; a -&gt; Property
-</span><a href="Test.QuickCheck.Classes.Algebra.PartialOrd.html#partialOrdLaw_antisymmetry"><span class="hs-identifier hs-var hs-var">partialOrdLaw_antisymmetry</span></a></span></span><span> </span><span id="local-6989586621679041643"><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041643"><span class="hs-identifier hs-var">a</span></a></span></span><span> </span><span id="local-6989586621679041644"><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041644"><span class="hs-identifier hs-var">b</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Test.QuickCheck.Classes.Algebra.PartialOrd.html#partialOrdLaw_antisymmetry"><span class="hs-identifier hs-var hs-var">partialOrdLaw_antisymmetry</span></a></span></span><span> </span><span id="local-6989586621679051084"><span class="annot"><span class="annottext">a
+</span><a href="#local-6989586621679051084"><span class="hs-identifier hs-var">a</span></a></span></span><span> </span><span id="local-6989586621679051085"><span class="annot"><span class="annottext">a
+</span><a href="#local-6989586621679051085"><span class="hs-identifier hs-var">b</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-66"></span><span>    </span><span class="annot"><span class="annottext">String -&gt; Bool -&gt; Property
 forall t. Testable t =&gt; String -&gt; t -&gt; Property
 </span><span class="hs-identifier hs-var">makeProperty</span></span><span>
@@ -106,20 +106,20 @@ forall t. Testable t =&gt; String -&gt; t -&gt; Property
 </span><span class="hs-string">&quot;not (a `leq` b &amp;&amp; b `leq` a) || a == b&quot;</span></span><span>
 </span><span id="line-68"></span><span>        </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Bool -&gt; Bool
 </span><span class="hs-identifier hs-var">not</span></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041643"><span class="hs-identifier hs-var">a</span></a></span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; Bool
+</span><a href="#local-6989586621679051084"><span class="hs-identifier hs-var">a</span></a></span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; Bool
 forall a. PartialOrd a =&gt; a -&gt; a -&gt; Bool
 </span><span class="hs-operator hs-var">`leq`</span></span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041644"><span class="hs-identifier hs-var">b</span></a></span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Bool -&gt; Bool
+</span><a href="#local-6989586621679051085"><span class="hs-identifier hs-var">b</span></a></span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Bool -&gt; Bool
 </span><span class="hs-operator hs-var">&amp;&amp;</span></span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041644"><span class="hs-identifier hs-var">b</span></a></span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; Bool
+</span><a href="#local-6989586621679051085"><span class="hs-identifier hs-var">b</span></a></span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; Bool
 forall a. PartialOrd a =&gt; a -&gt; a -&gt; Bool
 </span><span class="hs-operator hs-var">`leq`</span></span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041643"><span class="hs-identifier hs-var">a</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Bool -&gt; Bool
+</span><a href="#local-6989586621679051084"><span class="hs-identifier hs-var">a</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Bool -&gt; Bool
 </span><span class="hs-operator hs-var">||</span></span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041643"><span class="hs-identifier hs-var">a</span></a></span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; Bool
+</span><a href="#local-6989586621679051084"><span class="hs-identifier hs-var">a</span></a></span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; Bool
 forall a. Eq a =&gt; a -&gt; a -&gt; Bool
 </span><span class="hs-operator hs-var">==</span></span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041644"><span class="hs-identifier hs-var">b</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679051085"><span class="hs-identifier hs-var">b</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-69"></span><span>    </span><span class="annot"><span class="annottext">Property -&gt; (Property -&gt; Property) -&gt; Property
 forall a b. a -&gt; (a -&gt; b) -&gt; b
 </span><span class="hs-operator hs-var">&amp;</span></span><span> </span><span class="annot"><span class="annottext">Double -&gt; Bool -&gt; String -&gt; Property -&gt; Property
@@ -129,25 +129,25 @@ Double -&gt; Bool -&gt; String -&gt; prop -&gt; Property
 </span><span class="hs-identifier hs-var">cover</span></span><span> </span><span class="annot"><span class="annottext">Double
 </span><span class="hs-number">1</span></span><span>
 </span><span id="line-70"></span><span>        </span><span class="hs-special">(</span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041643"><span class="hs-identifier hs-var">a</span></a></span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; Bool
+</span><a href="#local-6989586621679051084"><span class="hs-identifier hs-var">a</span></a></span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; Bool
 forall a. PartialOrd a =&gt; a -&gt; a -&gt; Bool
 </span><span class="hs-operator hs-var">`leq`</span></span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041644"><span class="hs-identifier hs-var">b</span></a></span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Bool -&gt; Bool
+</span><a href="#local-6989586621679051085"><span class="hs-identifier hs-var">b</span></a></span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Bool -&gt; Bool
 </span><span class="hs-operator hs-var">&amp;&amp;</span></span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041644"><span class="hs-identifier hs-var">b</span></a></span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; Bool
+</span><a href="#local-6989586621679051085"><span class="hs-identifier hs-var">b</span></a></span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; Bool
 forall a. PartialOrd a =&gt; a -&gt; a -&gt; Bool
 </span><span class="hs-operator hs-var">`leq`</span></span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041643"><span class="hs-identifier hs-var">a</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679051084"><span class="hs-identifier hs-var">a</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-71"></span><span>        </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;a `leq` b &amp;&amp; b `leq` a&quot;</span></span><span>
 </span><span id="line-72"></span><span>
-</span><span id="line-73"></span><span id="local-6989586621679041581"><span class="annot"><a href="Test.QuickCheck.Classes.Algebra.PartialOrd.html#partialOrdLaw_transitivity"><span class="hs-identifier hs-type">partialOrdLaw_transitivity</span></a></span><span>
-</span><span id="line-74"></span><span>    </span><span class="hs-glyph">::</span><span> </span><span class="annot"><span class="hs-identifier hs-type">PartialOrd</span></span><span> </span><span class="annot"><a href="#local-6989586621679041581"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="#local-6989586621679041581"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="#local-6989586621679041581"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="#local-6989586621679041581"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="hs-identifier hs-type">Property</span></span></span><span>
+</span><span id="line-73"></span><span id="local-6989586621679051022"><span class="annot"><a href="Test.QuickCheck.Classes.Algebra.PartialOrd.html#partialOrdLaw_transitivity"><span class="hs-identifier hs-type">partialOrdLaw_transitivity</span></a></span><span>
+</span><span id="line-74"></span><span>    </span><span class="hs-glyph">::</span><span> </span><span class="annot"><span class="hs-identifier hs-type">PartialOrd</span></span><span> </span><span class="annot"><a href="#local-6989586621679051022"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="#local-6989586621679051022"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="#local-6989586621679051022"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="#local-6989586621679051022"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="hs-identifier hs-type">Property</span></span></span><span>
 </span><span id="line-75"></span><span id="partialOrdLaw_transitivity"><span class="annot"><span class="annottext">partialOrdLaw_transitivity :: forall a. PartialOrd a =&gt; a -&gt; a -&gt; a -&gt; Property
-</span><a href="Test.QuickCheck.Classes.Algebra.PartialOrd.html#partialOrdLaw_transitivity"><span class="hs-identifier hs-var hs-var">partialOrdLaw_transitivity</span></a></span></span><span> </span><span id="local-6989586621679041668"><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041668"><span class="hs-identifier hs-var">x</span></a></span></span><span> </span><span id="local-6989586621679041669"><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041669"><span class="hs-identifier hs-var">y</span></a></span></span><span> </span><span id="local-6989586621679041670"><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041670"><span class="hs-identifier hs-var">z</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Test.QuickCheck.Classes.Algebra.PartialOrd.html#partialOrdLaw_transitivity"><span class="hs-identifier hs-var hs-var">partialOrdLaw_transitivity</span></a></span></span><span> </span><span id="local-6989586621679051109"><span class="annot"><span class="annottext">a
+</span><a href="#local-6989586621679051109"><span class="hs-identifier hs-var">x</span></a></span></span><span> </span><span id="local-6989586621679051110"><span class="annot"><span class="annottext">a
+</span><a href="#local-6989586621679051110"><span class="hs-identifier hs-var">y</span></a></span></span><span> </span><span id="local-6989586621679051111"><span class="annot"><span class="annottext">a
+</span><a href="#local-6989586621679051111"><span class="hs-identifier hs-var">z</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-76"></span><span>    </span><span class="annot"><span class="annottext">String -&gt; Bool -&gt; Property
 forall t. Testable t =&gt; String -&gt; t -&gt; Property
 </span><span class="hs-identifier hs-var">makeProperty</span></span><span>
@@ -155,20 +155,20 @@ forall t. Testable t =&gt; String -&gt; t -&gt; Property
 </span><span class="hs-string">&quot;not (a `leq` b &amp;&amp; b `leq` c) || a `leq` c&quot;</span></span><span>
 </span><span id="line-78"></span><span>        </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Bool -&gt; Bool
 </span><span class="hs-identifier hs-var">not</span></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041671"><span class="hs-identifier hs-var">a</span></a></span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; Bool
+</span><a href="#local-6989586621679051112"><span class="hs-identifier hs-var">a</span></a></span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; Bool
 forall a. PartialOrd a =&gt; a -&gt; a -&gt; Bool
 </span><span class="hs-operator hs-var">`leq`</span></span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041672"><span class="hs-identifier hs-var">b</span></a></span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Bool -&gt; Bool
+</span><a href="#local-6989586621679051113"><span class="hs-identifier hs-var">b</span></a></span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Bool -&gt; Bool
 </span><span class="hs-operator hs-var">&amp;&amp;</span></span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041672"><span class="hs-identifier hs-var">b</span></a></span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; Bool
+</span><a href="#local-6989586621679051113"><span class="hs-identifier hs-var">b</span></a></span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; Bool
 forall a. PartialOrd a =&gt; a -&gt; a -&gt; Bool
 </span><span class="hs-operator hs-var">`leq`</span></span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041673"><span class="hs-identifier hs-var">c</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Bool -&gt; Bool
+</span><a href="#local-6989586621679051114"><span class="hs-identifier hs-var">c</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Bool -&gt; Bool
 </span><span class="hs-operator hs-var">||</span></span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041671"><span class="hs-identifier hs-var">a</span></a></span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; Bool
+</span><a href="#local-6989586621679051112"><span class="hs-identifier hs-var">a</span></a></span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; Bool
 forall a. PartialOrd a =&gt; a -&gt; a -&gt; Bool
 </span><span class="hs-operator hs-var">`leq`</span></span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041673"><span class="hs-identifier hs-var">c</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679051114"><span class="hs-identifier hs-var">c</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-79"></span><span>    </span><span class="annot"><span class="annottext">Property -&gt; (Property -&gt; Property) -&gt; Property
 forall a b. a -&gt; (a -&gt; b) -&gt; b
 </span><span class="hs-operator hs-var">&amp;</span></span><span> </span><span class="annot"><span class="annottext">Double -&gt; Bool -&gt; String -&gt; Property -&gt; Property
@@ -178,103 +178,103 @@ Double -&gt; Bool -&gt; String -&gt; prop -&gt; Property
 </span><span class="hs-identifier hs-var">cover</span></span><span> </span><span class="annot"><span class="annottext">Double
 </span><span class="hs-number">1</span></span><span>
 </span><span id="line-80"></span><span>        </span><span class="hs-special">(</span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041671"><span class="hs-identifier hs-var">a</span></a></span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; Bool
+</span><a href="#local-6989586621679051112"><span class="hs-identifier hs-var">a</span></a></span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; Bool
 forall a. PartialOrd a =&gt; a -&gt; a -&gt; Bool
 </span><span class="hs-operator hs-var">`leq`</span></span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041672"><span class="hs-identifier hs-var">b</span></a></span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Bool -&gt; Bool
+</span><a href="#local-6989586621679051113"><span class="hs-identifier hs-var">b</span></a></span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Bool -&gt; Bool
 </span><span class="hs-operator hs-var">&amp;&amp;</span></span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041672"><span class="hs-identifier hs-var">b</span></a></span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; Bool
+</span><a href="#local-6989586621679051113"><span class="hs-identifier hs-var">b</span></a></span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; Bool
 forall a. PartialOrd a =&gt; a -&gt; a -&gt; Bool
 </span><span class="hs-operator hs-var">`leq`</span></span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041673"><span class="hs-identifier hs-var">c</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679051114"><span class="hs-identifier hs-var">c</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-81"></span><span>        </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;a `leq` b &amp;&amp; b `leq` c&quot;</span></span><span>
 </span><span id="line-82"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-83"></span><span>    </span><span class="hs-special">(</span><span id="local-6989586621679041671"><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041671"><span class="hs-identifier hs-var">a</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679041672"><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041672"><span class="hs-identifier hs-var">b</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679041673"><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041673"><span class="hs-identifier hs-var">c</span></a></span></span><span class="hs-special">)</span><span>
+</span><span id="line-83"></span><span>    </span><span class="hs-special">(</span><span id="local-6989586621679051112"><span class="annot"><span class="annottext">a
+</span><a href="#local-6989586621679051112"><span class="hs-identifier hs-var">a</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679051113"><span class="annot"><span class="annottext">a
+</span><a href="#local-6989586621679051113"><span class="hs-identifier hs-var">b</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679051114"><span class="annot"><span class="annottext">a
+</span><a href="#local-6989586621679051114"><span class="hs-identifier hs-var">c</span></a></span></span><span class="hs-special">)</span><span>
 </span><span id="line-84"></span><span>        </span><span class="hs-glyph">|</span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041668"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; Bool
+</span><a href="#local-6989586621679051109"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; Bool
 forall a. PartialOrd a =&gt; a -&gt; a -&gt; Bool
 </span><span class="hs-operator hs-var">`leq`</span></span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041669"><span class="hs-identifier hs-var">y</span></a></span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Bool -&gt; Bool
+</span><a href="#local-6989586621679051110"><span class="hs-identifier hs-var">y</span></a></span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Bool -&gt; Bool
 </span><span class="hs-operator hs-var">&amp;&amp;</span></span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041669"><span class="hs-identifier hs-var">y</span></a></span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; Bool
+</span><a href="#local-6989586621679051110"><span class="hs-identifier hs-var">y</span></a></span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; Bool
 forall a. PartialOrd a =&gt; a -&gt; a -&gt; Bool
 </span><span class="hs-operator hs-var">`leq`</span></span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041670"><span class="hs-identifier hs-var">z</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041668"><span class="hs-identifier hs-var">x</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041669"><span class="hs-identifier hs-var">y</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041670"><span class="hs-identifier hs-var">z</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679051111"><span class="hs-identifier hs-var">z</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">a
+</span><a href="#local-6989586621679051109"><span class="hs-identifier hs-var">x</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">a
+</span><a href="#local-6989586621679051110"><span class="hs-identifier hs-var">y</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">a
+</span><a href="#local-6989586621679051111"><span class="hs-identifier hs-var">z</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-85"></span><span>        </span><span class="hs-glyph">|</span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041668"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; Bool
+</span><a href="#local-6989586621679051109"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; Bool
 forall a. PartialOrd a =&gt; a -&gt; a -&gt; Bool
 </span><span class="hs-operator hs-var">`leq`</span></span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041670"><span class="hs-identifier hs-var">z</span></a></span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Bool -&gt; Bool
+</span><a href="#local-6989586621679051111"><span class="hs-identifier hs-var">z</span></a></span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Bool -&gt; Bool
 </span><span class="hs-operator hs-var">&amp;&amp;</span></span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041670"><span class="hs-identifier hs-var">z</span></a></span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; Bool
+</span><a href="#local-6989586621679051111"><span class="hs-identifier hs-var">z</span></a></span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; Bool
 forall a. PartialOrd a =&gt; a -&gt; a -&gt; Bool
 </span><span class="hs-operator hs-var">`leq`</span></span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041669"><span class="hs-identifier hs-var">y</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041668"><span class="hs-identifier hs-var">x</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041670"><span class="hs-identifier hs-var">z</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041669"><span class="hs-identifier hs-var">y</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679051110"><span class="hs-identifier hs-var">y</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">a
+</span><a href="#local-6989586621679051109"><span class="hs-identifier hs-var">x</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">a
+</span><a href="#local-6989586621679051111"><span class="hs-identifier hs-var">z</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">a
+</span><a href="#local-6989586621679051110"><span class="hs-identifier hs-var">y</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-86"></span><span>        </span><span class="hs-glyph">|</span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041669"><span class="hs-identifier hs-var">y</span></a></span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; Bool
+</span><a href="#local-6989586621679051110"><span class="hs-identifier hs-var">y</span></a></span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; Bool
 forall a. PartialOrd a =&gt; a -&gt; a -&gt; Bool
 </span><span class="hs-operator hs-var">`leq`</span></span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041668"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Bool -&gt; Bool
+</span><a href="#local-6989586621679051109"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Bool -&gt; Bool
 </span><span class="hs-operator hs-var">&amp;&amp;</span></span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041668"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; Bool
+</span><a href="#local-6989586621679051109"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; Bool
 forall a. PartialOrd a =&gt; a -&gt; a -&gt; Bool
 </span><span class="hs-operator hs-var">`leq`</span></span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041670"><span class="hs-identifier hs-var">z</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041669"><span class="hs-identifier hs-var">y</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041668"><span class="hs-identifier hs-var">x</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041670"><span class="hs-identifier hs-var">z</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679051111"><span class="hs-identifier hs-var">z</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">a
+</span><a href="#local-6989586621679051110"><span class="hs-identifier hs-var">y</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">a
+</span><a href="#local-6989586621679051109"><span class="hs-identifier hs-var">x</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">a
+</span><a href="#local-6989586621679051111"><span class="hs-identifier hs-var">z</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-87"></span><span>        </span><span class="hs-glyph">|</span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041669"><span class="hs-identifier hs-var">y</span></a></span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; Bool
+</span><a href="#local-6989586621679051110"><span class="hs-identifier hs-var">y</span></a></span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; Bool
 forall a. PartialOrd a =&gt; a -&gt; a -&gt; Bool
 </span><span class="hs-operator hs-var">`leq`</span></span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041670"><span class="hs-identifier hs-var">z</span></a></span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Bool -&gt; Bool
+</span><a href="#local-6989586621679051111"><span class="hs-identifier hs-var">z</span></a></span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Bool -&gt; Bool
 </span><span class="hs-operator hs-var">&amp;&amp;</span></span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041670"><span class="hs-identifier hs-var">z</span></a></span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; Bool
+</span><a href="#local-6989586621679051111"><span class="hs-identifier hs-var">z</span></a></span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; Bool
 forall a. PartialOrd a =&gt; a -&gt; a -&gt; Bool
 </span><span class="hs-operator hs-var">`leq`</span></span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041668"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041669"><span class="hs-identifier hs-var">y</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041670"><span class="hs-identifier hs-var">z</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041668"><span class="hs-identifier hs-var">x</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679051109"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">a
+</span><a href="#local-6989586621679051110"><span class="hs-identifier hs-var">y</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">a
+</span><a href="#local-6989586621679051111"><span class="hs-identifier hs-var">z</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">a
+</span><a href="#local-6989586621679051109"><span class="hs-identifier hs-var">x</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-88"></span><span>        </span><span class="hs-glyph">|</span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041670"><span class="hs-identifier hs-var">z</span></a></span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; Bool
+</span><a href="#local-6989586621679051111"><span class="hs-identifier hs-var">z</span></a></span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; Bool
 forall a. PartialOrd a =&gt; a -&gt; a -&gt; Bool
 </span><span class="hs-operator hs-var">`leq`</span></span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041668"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Bool -&gt; Bool
+</span><a href="#local-6989586621679051109"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Bool -&gt; Bool
 </span><span class="hs-operator hs-var">&amp;&amp;</span></span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041668"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; Bool
+</span><a href="#local-6989586621679051109"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; Bool
 forall a. PartialOrd a =&gt; a -&gt; a -&gt; Bool
 </span><span class="hs-operator hs-var">`leq`</span></span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041669"><span class="hs-identifier hs-var">y</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041670"><span class="hs-identifier hs-var">z</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041668"><span class="hs-identifier hs-var">x</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041669"><span class="hs-identifier hs-var">y</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679051110"><span class="hs-identifier hs-var">y</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">a
+</span><a href="#local-6989586621679051111"><span class="hs-identifier hs-var">z</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">a
+</span><a href="#local-6989586621679051109"><span class="hs-identifier hs-var">x</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">a
+</span><a href="#local-6989586621679051110"><span class="hs-identifier hs-var">y</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-89"></span><span>        </span><span class="hs-glyph">|</span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041670"><span class="hs-identifier hs-var">z</span></a></span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; Bool
+</span><a href="#local-6989586621679051111"><span class="hs-identifier hs-var">z</span></a></span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; Bool
 forall a. PartialOrd a =&gt; a -&gt; a -&gt; Bool
 </span><span class="hs-operator hs-var">`leq`</span></span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041669"><span class="hs-identifier hs-var">y</span></a></span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Bool -&gt; Bool
+</span><a href="#local-6989586621679051110"><span class="hs-identifier hs-var">y</span></a></span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Bool -&gt; Bool
 </span><span class="hs-operator hs-var">&amp;&amp;</span></span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041669"><span class="hs-identifier hs-var">y</span></a></span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; Bool
+</span><a href="#local-6989586621679051110"><span class="hs-identifier hs-var">y</span></a></span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; Bool
 forall a. PartialOrd a =&gt; a -&gt; a -&gt; Bool
 </span><span class="hs-operator hs-var">`leq`</span></span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041668"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041670"><span class="hs-identifier hs-var">z</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041669"><span class="hs-identifier hs-var">y</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041668"><span class="hs-identifier hs-var">x</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679051109"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">a
+</span><a href="#local-6989586621679051111"><span class="hs-identifier hs-var">z</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">a
+</span><a href="#local-6989586621679051110"><span class="hs-identifier hs-var">y</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">a
+</span><a href="#local-6989586621679051109"><span class="hs-identifier hs-var">x</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-90"></span><span>        </span><span class="hs-glyph">|</span><span> </span><span class="annot"><span class="annottext">Bool
 </span><span class="hs-identifier hs-var">otherwise</span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041668"><span class="hs-identifier hs-var">x</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041669"><span class="hs-identifier hs-var">y</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679041670"><span class="hs-identifier hs-var">z</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679051109"><span class="hs-identifier hs-var">x</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">a
+</span><a href="#local-6989586621679051110"><span class="hs-identifier hs-var">y</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">a
+</span><a href="#local-6989586621679051111"><span class="hs-identifier hs-var">z</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-91"></span></pre></body></html>
